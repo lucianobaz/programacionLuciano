@@ -19,7 +19,8 @@ public class Mago extends Personaje {
     //Constructor de Mago: escribimos super(nombre, salud) para iniciar sus atributos 
     //propios y herdedados y además, crea su propio Inventario
     public Mago(String nombre, int salud, int mana, int inteligencia, int nivel) {
-        super(nombre, salud);
+        this.salud = salud;
+        this.nombre = nombre;
         this.mana = mana;
         this.inteligencia = inteligencia;
         this.nivel = nivel;
@@ -27,6 +28,8 @@ public class Mago extends Personaje {
         this.cantidadHechizos = 0;
         this.inventario = new Inventario(10);
     }
+
+
 
 //---------------------------- APRENDER HECHIZO ----------------------------
     //Metodo para agregar un hechizo nuevo al array de hechizos conocidos

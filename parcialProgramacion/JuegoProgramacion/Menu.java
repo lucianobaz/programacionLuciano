@@ -13,6 +13,8 @@ public class Menu {
     //Los guerreros, los magos, las mascotas, los objetos magicos, etc pueden tener hasta 50 elementos
     private static final int MAX = 50;
 
+//para que no se pueda llamar desde el main
+//private encapsula la variable para que no se altere afuera de su clase
 
     private static Guerrero[] guerreros = new Guerrero[MAX];
     private static int cantidadGuerreros = 0;
@@ -131,6 +133,11 @@ public class Menu {
         String nombre = sc.nextLine();
         System.out.print("¿Cuanta salud tiene tu guerrero? (Max 100.): ");
         int salud = sc.nextInt();
+        while(salud > 100) {
+            System.out.println("El numero excede la cantidad maxima de salud");
+            System.out.print("¿Cuanta salud tiene tu guerrero? (Max 100.): ");
+            salud = sc.nextInt();
+        }
         System.out.print("¿Cuanta fuerza tiene tu guerrero? (Max 100.)");
         int fuerza = sc.nextInt();
         System.out.print("¿Cuanta defensa tiene tu guerrero? (Max 100.)");
