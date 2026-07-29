@@ -76,9 +76,6 @@ y después inicia los atributos propios. */
     }
 
 //---------------------------- GETTERS Y SETTERS ----------------------------
-//Puertas de acceso
-//GET permite que otras clases vean y lean el valor de la variable
-//SET permite que otras clases cambien el valor
 
     public int getFuerza() {
         return fuerza;
